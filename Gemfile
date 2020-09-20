@@ -62,5 +62,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rename'
-
 gem 'devise'
+gem 'haml-rails'
