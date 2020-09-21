@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root 'tops#index'
   devise_for :users, controllers: {registrations: 'users/registrations', sessions: 'users/sessions'}
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_scope :user do
+    get 'new_assignment', to: 'users/registrations#new_assignment'
+    post 'create_assignment', to: 'users/registrations#create_assignment'
+  end
+  root 'tops#index'
 end
