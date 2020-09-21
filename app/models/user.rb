@@ -5,6 +5,16 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   belongs_to :assignment
   validates :name, presence: true
-  validates :number, uniqueness: true
-  validates :password, confrimation: true
+  validates :email, uniqueness: true
+  validates :number, presence: true, uniqueness: true
+  validates :password, confirmation: true
+
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
+  end
+
 end
