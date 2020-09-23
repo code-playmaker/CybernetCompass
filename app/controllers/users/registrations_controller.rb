@@ -10,9 +10,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash.now[alert] = @user.errors.full_messages
       render :new and return
     end
-    session["devise.regist_data"] = {user: @user.attributes}
+    # session["devise.regist_data"] = {user: @user.attributes}
+    # session["devise.regist_data"][:user]["password"] = params[:user][:password]
     session["devise.regist_data"] = user_params
-    @assignment = @user.assignments.build
+    @assignment = @user.build_assignment
     render :new_assignment and return
   end
 
