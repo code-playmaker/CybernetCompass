@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2020_09_20_023547) do
     t.string "department", null: false
     t.string "division", null: false
     t.string "charge", null: false
-    t.bigint "user_id", null: false
+    t.bigint "users_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_assignments_on_user_id"
+    t.index ["users_id"], name: "index_assignments_on_users_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -38,5 +38,5 @@ ActiveRecord::Schema.define(version: 2020_09_20_023547) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "assignments", "users"
+  add_foreign_key "assignments", "users", column: "users_id"
 end
