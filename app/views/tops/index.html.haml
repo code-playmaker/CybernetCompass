@@ -2,8 +2,16 @@
   -# %h1 Tops#index
   -# %p Find me in app/views/tops/index.html.erb
   .upper
-    .message
-    .circulation
+    = link_to do
+      .message
+        係内メッセージ
+    = link_to do
+      .circulation
+        部・課内回覧
   .lower
-    .notice
-    .todo
+    = link_to do
+      .notice
+        お知らせ
+    = link_to do
+      .todo
+        スケジュール
