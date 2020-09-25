@@ -23,6 +23,16 @@ Things you may want to cover:
 
 * ...
 
+## What
+いわゆる回覧アプリ。
+### 内容
+・送信者はメッセージ・データ送信時に重要度をつける、閲覧者は送られたメッセージ・データにお気に入り保存することで各々が必要だと考えた情報をすぐに閲覧し直せるようにする。
+・係内、部内、全組織とそれぞれ分けることで、情報が埋もれるのを防ぐ。
+・スケジュール機能も加え、組織メンバーの予定も確認できるようにする。
+
+## Why
+情報過多な時代、会社や官公庁などの組織に入ってくる情報量も非常に多くなってきています。メール・回覧（電子・紙媒体どちらも含む）、様々な形式で情報が回ってきますが、１つのフォルダに多種多様のデータが入る、もしくは紙に埋もれて整理できない組織が多いのではないかと考えました。
+
 ## ER図
 
 [![Image from Gyazo](https://gyazo.com/b32763adb8130bc0823306260fc37956.png)]
@@ -52,9 +62,36 @@ has_many :task
 has_many :users
 
 ## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|content|string|null: false|
+|file||
+### Association
+belongs_to :user
 
 ## circulationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|content|string|null: false|
+|file||
+### Association
+belongs_to :user
 
 ## noticesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|content|string|null: false|
+|file||
+### Association
+belongs_to :user
 
 ## tasksテーブル
+|Column|Type|Options|
+|------|----|-------|
+|datetime||null:false|
+|todo||null: false|
+### Association
+belongs_to :user
