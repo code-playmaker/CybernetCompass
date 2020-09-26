@@ -1,21 +1,28 @@
 // Place all the styles related to the Tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+}
 .top {
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 100%;
   background-color: #f8f8f8;
   .upper, .lower {
     width: 100%;
-    height: 200px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     .message, .circulation, .notice, .todo {
       height: 100px;
-      width: 400px;
+      width: 300px;
       border-radius: 1.0em;
       background-color: #fff;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
       text-align: center;
       line-height: 100px;
     }
