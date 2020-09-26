@@ -1,6 +1,49 @@
 .header {
   height: 60px;
   width: 100%;
-  line-height: 60px;
+  display: flex;
+  padding: 0 60px;
   background-color: #fff;
+  &__left--nav {
+    font-family: sans-serif;
+    line-height: 60px;
+  }
+  &__right--nav {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    &--user {
+      margin-right: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      line-height: 32px;
+      font-size: 14px;
+      transition: all 0.2s;
+      padding: 9px 8px;
+      background-color: blue;
+      border: solid 1px blue;
+      border-radius: 0.4em;
+      transition: all 0.4s;
+      &:hover{
+        border-radius: 1.5em;
+      }
+    }
+    &--logout {
+      text-decoration: none;
+      color: #3CCACE;
+      line-height: 32px;
+      font-size: 14px;
+      transition: all 0.2s;
+      padding: 9px 5px;
+      background-color: white;
+      border: solid 1px #3CCACE;
+      border-radius: 0.4em;
+      transition: all 0.4s;
+      &:hover{
+        background-color: #3CCACE;
+        color: white;
+      }
+    }
+  }
 }
