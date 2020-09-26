@@ -1,2 +1,7 @@
 .message-index
-  
+  .message-index__blank
+  .message-index__btn
+    =link_to new_message_path, class: "message-index__btn--sentence" do
+      %i.far.fa-paper-plane
+      新規メッセージを作成
+  .message-index__list
