@@ -41,7 +41,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false, unique: ture|
+|number|string|null: false, unique: ture|
 |password|string|null: false|
 |name|string|null: false|
 ### Association
@@ -66,7 +66,10 @@ has_many :users
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
-|file||
+|upload_file_name|string|
+|upload_file|binary|
+|date|datetime|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 belongs_to :user
 
@@ -75,7 +78,10 @@ belongs_to :user
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
-|file||
+|upload_file_name|string|
+|upload_file|binary|
+|date|datetime|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 belongs_to :user
 
@@ -84,7 +90,10 @@ belongs_to :user
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
-|file||
+|upload_file_name|string|
+|upload_file|binary|
+|date|datetime|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 belongs_to :user
 
@@ -93,5 +102,6 @@ belongs_to :user
 |------|----|-------|
 |datetime||null:false|
 |todo||null: false|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 belongs_to :user
