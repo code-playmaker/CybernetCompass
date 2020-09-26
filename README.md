@@ -35,11 +35,11 @@ Things you may want to cover:
 
 ## ER図
 
-[![Image from Gyazo](https://gyazo.com/b32763adb8130bc0823306260fc37956.png)]
+![Image from Gyazo](https://gyazo.com/b32763adb8130bc0823306260fc37956.png)
 (https://gyazo.com/b32763adb8130bc0823306260fc37956)
 
 ## トップページ
-[![Image from Gyazo](https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94.png)]
+![Image from Gyazo](https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94.png)
 (https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94)
 
 ## usersテーブル
