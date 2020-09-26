@@ -1,2 +1,9 @@
 .header
-  CybernetCompass
+  .header__left--nav
+    %i.far.fa-compass
+    CybernetCompass
+  %ul.header__right--nav
+    %li
+      = link_to 'playmaker', "#", class: "header__right--nav--user"
+    %li
+      = link_to 'ログアウト', "#", class: "header__right--nav--logout"
