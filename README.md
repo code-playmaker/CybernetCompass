@@ -33,14 +33,9 @@ Things you may want to cover:
 ## Why
 情報過多な時代、会社や官公庁などの組織に入ってくる情報量も非常に多くなってきています。メール・回覧（電子・紙媒体どちらも含む）、様々な形式で情報が回ってきますが、１つのフォルダに多種多様のデータが入る、もしくは紙に埋もれて整理できない組織が多いのではないかと考えました。
 
-## ER図
-
-![Image from Gyazo](https://gyazo.com/b32763adb8130bc0823306260fc37956.png)
-(https://gyazo.com/b32763adb8130bc0823306260fc37956)
-
 ## トップページ
-![Image from Gyazo](https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94.png)
-(https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94)
+![Image from Gyazo](https://gyazo.com/fd5a035d63998ccfa91794f7c1cb0e76.png)
+(https://gyazo.com/fd5a035d63998ccfa91794f7c1cb0e76)
 
 ## メッセージ作成画面
 ![Image from Gyazo](https://i.gyazo.com/c9fcbec3f15616c512ef18199de966fa.gif)
