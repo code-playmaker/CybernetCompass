@@ -5,8 +5,13 @@
   padding: 0 60px;
   background-color: #fff;
   &__left--nav {
-    font-family: sans-serif;
     line-height: 60px;
+    &--sentence {
+      text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
+      font-size: 20px;
+    }
   }
   &__right--nav {
     margin-left: auto;
@@ -21,8 +26,8 @@
       font-size: 14px;
       transition: all 0.2s;
       padding: 9px 8px;
-      background-color: blue;
-      border: solid 1px blue;
+      background-color: #00bfff;
+      border: solid 1px #00bfff;
       border-radius: 0.4em;
       transition: all 0.4s;
       &:hover{
