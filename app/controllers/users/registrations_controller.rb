@@ -10,8 +10,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash.now[alert] = @user.errors.full_messages
       render :new and return
     end
-    # session["devise.regist_data"] = {user: @user.attributes}
-    # session["devise.regist_data"][:user]["password"] = params[:user][:password]
     session["devise.regist_data"] = user_params
     @assignment = @user.build_assignment
     render :new_assignment and return
@@ -24,7 +22,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash.now[alert] = @assignment.errors.full_messages
       render :new and return
     end
-    @user.assignment.build(@assignment.attributes)
+    @user.build_assignment(@assignment.attributes)
     @user.save!
     sign_in(:user, @user)
     redirect_to root_path
