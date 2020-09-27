@@ -5,6 +5,6 @@
       CybernetCompass
   %ul.header__right--nav
     %li
-      = link_to 'playmaker', "#", class: "header__right--nav--user"
+      = link_to current_user.name, "#", class: "header__right--nav--user"
     %li
       = link_to 'ログアウト', "#", class: "header__right--nav--logout"
