@@ -1,0 +1,44 @@
+.message-new
+  .message-new__first
+    分かり易く、丁寧に、相手の立場になって、メッセージを作成しましょう。
+  .message-new__format
+    = form_with model: @message, local: true do |f|
+      .field
+        = f.label :件名：, class: "field--label"
+        = f.label :必須, class: "field--must"
+        %br
+        = f.text_field :title, autofocus: true, autocomplete: "title", required: "true", class: "field--form--title"
+      .field
+        = f.label :重要度：, class: "field--label"
+        = f.label :必須, class: "field--must"
+        %br
+        %br
+        = f.radio_button :importancy, "高"
+        = f.label :高, class: "field--radio--high"
+        = f.radio_button :importancy, "中"
+        = f.label :中, class: "field--radio--midium"
+        = f.radio_button :importancy, "低"
+        = f.label :低, class: "field--radio--low"
+      .field
+        = f.label :緊急度：, class: "field--label"
+        = f.label :必須, class: "field--must"
+        %br
+        %br
+        = f.radio_button :emergency, "高"
+        = f.label :高, class: "field--radio--high"
+        = f.radio_button :emergency, "中"
+        = f.label :中, class: "field--radio--midium"
+        = f.radio_button :emergency, "低"
+        = f.label :低, class: "field--radio--low"
+      .field-content
+        = f.label :内容：, class: "field-content--label"
+        = f.label :必須, class: "field-content--must"
+        %br
+        = f.text_area :content, autofocus: true, autocomplete: "content", required: "true", class: "field-content--form--content"
+      .field-file
+        = f.label :添付ファイル：, class: "field-file--label"
+        %br
+        %br
+        = f.file_field :upload_file, class: "field-file--form"
+      .submit
+        = f.submit "送信", class: "submit--btn"
