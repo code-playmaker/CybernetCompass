@@ -42,6 +42,10 @@ Things you may want to cover:
 ![Image from Gyazo](https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94.png)
 (https://gyazo.com/48e2776b1f326cbca9ae394696fb0f94)
 
+## メッセージ作成画面
+![Image from Gyazo](https://i.gyazo.com/c9fcbec3f15616c512ef18199de966fa.gif)
+(https://i.gyazo.com/c9fcbec3f15616c512ef18199de966fa)
+
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
