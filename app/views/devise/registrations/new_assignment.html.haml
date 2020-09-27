@@ -1,16 +1,16 @@
 .assignment
   = form_for(@assignment, url: create_assignment_path, method: :post) do |f|
     .assignment__field
-      = f.label :部, class: "field--label"
+      = f.label :部：, class: "assignment__field--label"
       %br/
-      = f.text_field :department, autofocus: true, autocomplete: "department", placeholder: "例）健康部", required: "true", class: "field--form"
+      = f.text_field :department, autofocus: true, autocomplete: "department", placeholder: "例）健康部", required: "true", class: "assignment__field--form"
     .assignment__field
-      = f.label :課, class: "field--label"
+      = f.label :課：, class: "assignment__field--label"
       %br/
-      = f.text_field :division, autofocus: true, autocomplete: "division", placeholder: "例）保健所生活衛生課", required: "true", class: "field--form"
+      = f.text_field :division, autofocus: true, autocomplete: "division", placeholder: "例）保健所生活衛生課", required: "true", class: "assignment__field--form"
     .assignment__field
-      = f.label :係, class: "field--label"
+      = f.label :係：, class: "assignment__field--label"
       %br/
-      = f.text_field :charge, autofocus: true, autocomplete: "charge", placeholder: "例) 環境衛生係", required: "true", class: "field--form"
-    .actions
-      = f.submit "登録", class: "actions--btn", url: "#"
+      = f.text_field :charge, autofocus: true, autocomplete: "charge", placeholder: "例) 環境衛生係", required: "true", class: "assignment__field--form"
+    .assginment__actions
+      = f.submit "登録", class: "actions--btn", url: "#", class: "assginment__actions--btn"
