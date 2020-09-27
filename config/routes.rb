@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     post 'create_assignment', to: 'users/registrations#create_assignment'
   end
   root 'tops#index'
-  resources :messages, only: [:index, :new, :create]
+  resources :messages, only: [:index, :new, :create, :show]
 end
