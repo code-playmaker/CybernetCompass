@@ -1,7 +1,8 @@
 .header
   .header__left--nav
-    %i.far.fa-compass
-    CybernetCompass
+    = link_to root_path, class: "header__left--nav--sentence" do
+      %i.far.fa-compass
+      CybernetCompass
   %ul.header__right--nav
     %li
       = link_to 'playmaker', "#", class: "header__right--nav--user"
