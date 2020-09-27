@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2020_09_26_044915) do
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "content", null: false
+    t.integer "importancy", null: false
+    t.integer "emergency", null: false
     t.string "upload_file_name"
     t.binary "upload_file"
     t.datetime "created_at", null: false
