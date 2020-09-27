@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 2020_09_26_044915) do
     t.string "department", null: false
     t.string "division", null: false
     t.string "charge", null: false
-    t.bigint "users_id", null: false
+    t.integer "user_id", null: false
+    t.bigint "users_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["users_id"], name: "index_assignments_on_users_id"
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_09_26_044915) do
     t.string "name", null: false
     t.string "number", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "assignment_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
