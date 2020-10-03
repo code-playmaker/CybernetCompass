@@ -7,12 +7,14 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message_params[:upload_file] = upload_file.read
-    upload_file = message_params[:upload_file]
-    if upload_file.save
-      message_params[:upload_file_name] = upload_file.original_filename
+    # message = {}
+    if message_params[:upload_file].present?
+      message_params[:upload_file].read
+      message_params[:upload_file_name] = message_params[:upload_file].original_filename
+      # message[:upload_file_name] = "#{message_params[:upload_file_name]}.#{message_params[:upload_file].original_filename.split('.')[1]}"
     end
     @message = Message.new(message_params)
+    @message.save!
     redirect_to root_path
   end
 
