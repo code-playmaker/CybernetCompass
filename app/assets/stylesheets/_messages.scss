@@ -39,7 +39,7 @@
   }
 }
 .message-new {
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 100%;
   background-color: #f8f8f8;
   overflow: scroll;
@@ -52,6 +52,7 @@
   &__format {
     margin: 0 auto;
     background-color: #ffffff;
+    margin-bottom: 100px;
     width: 600px;
     .field {
       margin: 0 auto;
