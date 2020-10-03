@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   root 'tops#index'
   resources :messages, only: [:index, :new, :create, :show]
   resources :circulations, only: [:index, :new, :create, :show]
+  resources :notices, only: [:index, :new, :create, :show]
+
 end
