@@ -7,6 +7,7 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.integer :emergency,        null: false
       t.string :upload_file_name
       t.binary :upload_file
+      t.references :user,     foreign_key: true, index: true
       t.timestamps
     end
   end
