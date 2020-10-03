@@ -38,9 +38,14 @@ Things you may want to cover:
 ![Image from Gyazo](https://gyazo.com/fd5a035d63998ccfa91794f7c1cb0e76.png)
 (https://gyazo.com/fd5a035d63998ccfa91794f7c1cb0e76)
 
-## メッセージ作成画面
+## メッセージ・回覧・お知らせ作成画面
 ![Image from Gyazo](https://i.gyazo.com/c9fcbec3f15616c512ef18199de966fa.gif)
 (https://i.gyazo.com/c9fcbec3f15616c512ef18199de966fa)
+
+## スケジュール管理(gem 'fullcalendar-rails')
+![Image from Gyazo](https://i.gyazo.com/c3ca8f0265828ff9af28ce42ae8f23b9.gif)
+(https://i.gyazo.com/c3ca8f0265828ff9af28ce42ae8f23b9)
+
 
 ## usersテーブル
 |Column|Type|Options|
@@ -101,11 +106,13 @@ belongs_to :user
 ### Association
 belongs_to :user
 
-## tasksテーブル
+## eventsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|datetime||null:false|
-|todo||null: false|
+|title|string|null:false|
+|body|string|null: false|
+|start_date|datetime|null: false|
+|end_date|datetime|null: false|
 |user_id|references|null: false, foreign_key: true|
 ### Association
 belongs_to :user
