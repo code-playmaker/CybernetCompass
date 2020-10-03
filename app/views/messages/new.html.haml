@@ -2,7 +2,7 @@
   .message-new__first
     分かり易く、丁寧に、相手の立場になって、メッセージを作成しましょう。
   .message-new__format
-    = form_with model: @message, local: true do |f|
+    = form_with model: @message, local: true, multiple: true do |f|
       .field
         = f.label :件名：, class: "field--label"
         = f.label :必須, class: "field--must"
