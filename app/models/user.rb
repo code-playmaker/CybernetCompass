@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :circulations
   has_many :notices
+  has_many :events
   validates :name, presence: true
   validates :number, presence: true, uniqueness: true
   validates :password, confirmation: true
