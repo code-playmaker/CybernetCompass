@@ -1,7 +1,8 @@
-%h1 Editing event
+.events-new
+  %h1 予定を変更してください。
 
-= render 'form'
-
-= link_to 'Show', @event
-\|
-= link_to 'Back', events_path
+  = render 'form'
+  .events-new--edit
+    = link_to '予定の状況', @event, class: "events-new--edit--btn1"
+    \|
+    = link_to '戻る', events_path, class: "events-new--edit--btn2"
