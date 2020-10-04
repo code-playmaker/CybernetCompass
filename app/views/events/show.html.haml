@@ -1,0 +1,29 @@
+.events-show
+  %p#notice= notice
+  .events-show__format
+    %p.events-show__format--title
+      .events-show__format--title--label
+        %b 件名：
+      .events-show__format--title--form
+        = @event.title
+    %p.events-show__format--body
+      .events-show__format--body--label
+        %b 詳細：
+      .events-show__format--body--form
+        = @event.body
+    .events-show__format--time
+      %p.events-show__format--time--start
+        %b 開始：
+        = @event.start_date.strftime("%H:%M")
+      〜
+      %p.events-show__format--time--end
+        %b 終了：
+        = @event.end_date.strftime("%H:%M")
+    %br
+  %br
+  .events-show__btn
+    = link_to '編集', edit_event_path(@event), class: "events-show__btn--edit"
+    \|
+    = link_to '戻る', events_path, class: "events-show__btn--back"
+    \|
+    = link_to '削除', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: "events-show__btn--destroy"
