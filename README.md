@@ -43,8 +43,8 @@ Things you may want to cover:
 (https://i.gyazo.com/c9fcbec3f15616c512ef18199de966fa)
 
 ## スケジュール管理(gem 'fullcalendar-rails')
-![Image from Gyazo](https://i.gyazo.com/c3ca8f0265828ff9af28ce42ae8f23b9.gif)
-(https://i.gyazo.com/c3ca8f0265828ff9af28ce42ae8f23b9)
+![Image from Gyazo](https://gyazo.com/bb81f7d72f2e3cb2ca1c1ae96c151bd9.gif)
+(https://gyazo.com/bb81f7d72f2e3cb2ca1c1ae96c151bd9)
 
 
 ## usersテーブル
