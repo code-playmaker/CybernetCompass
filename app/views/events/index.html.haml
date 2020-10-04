@@ -1,0 +1,29 @@
+.events
+  -# %h1.events スケジュール一覧
+  -# %table.events
+  -#   %thead.events
+  -#     %tr
+  -#       %th 　予定
+  -#       %th 詳細
+  -#       %th 開始時刻
+  -#       %th 終了時刻
+  -#       %th
+  -#       %th
+  -#       %th
+
+  -#   %tbody
+  -#     - @events.each do |event|
+  -#       %tr
+  -#         %td= event.title
+  -#         %td= event.body
+  -#         %td= event.start_date
+  -#         %td= event.end_date
+  -#         %td= link_to 'Show', event
+  -#         %td= link_to 'Edit', edit_event_path(event)
+  -#         %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
+  %br
+  %br
+  .events__btn
+    = link_to new_event_path, class: "events__btn--to_new" do
+      予定を立てる
+  #calendar.Calendar
