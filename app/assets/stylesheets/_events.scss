@@ -1,0 +1,168 @@
+// Place all the styles related to the events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.events {
+  width: 100%;
+  background-color: #f8f8f8;
+  h1.events {
+    height: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 80px;
+  }
+  thead.events {
+    justify-content: space-around;
+    th {
+      font-weight: bold;
+      .title {
+        padding-left: 20px;
+      }
+    }
+  }
+  &__btn {
+    height: 40px;
+    width: 150px;
+    background-color: #00bfff;
+    border: solid 1px;
+    border-color: #00bfff;
+    border-radius: 0.5em;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    &--to_new {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;
+    }
+  }
+}
+.events-new {
+  width: 100%;
+  background-color: #f8f8f8;
+  h1 {
+    height: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 80px;
+  }
+  &__format {
+    background-color: #fff;
+    width: 500px;
+    margin: 0 auto;
+    .field__title {
+      margin: 0 auto;
+      height: 80px;
+      width: 200px;
+      padding: 10px 0 10px 0;
+    }
+    .field__body {
+      margin: 0 auto;
+      height: 80px;
+      width: 200px;
+      padding: 10px 0 10px 0;
+      margin-bottom: 20px;
+    }
+    .field__time {
+      display: flex;
+      margin: 0 auto;
+      height: 80px;
+      width: 400px;
+      padding: 10px 0 10px 0;
+      margin-bottom: 20px;
+      &__start--dateselect, &__end--dateselect {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+  .actions {
+    margin: 0 auto;
+    text-align: center;
+    &--btn {
+      height: 50px;
+      width: 100px;
+      background-color: #00bfff;
+      border: solid 1px #00bfff;
+      font-size: 20px;
+      color: #ffffff;
+      border-radius: 1.0em;
+      transition: all 0.4s;
+      &:hover{
+        background-color: #fff;
+        color: #00bfff;
+      }
+    }
+  }
+}
+.events-show {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: #f8f8f8;
+  #notice {
+    height: 100px;
+  }
+  &__format {
+    background-color: #fff;
+    width: 500px;
+    margin: 0 auto;
+    &--title {
+      padding-top: 10px;
+      &--label {
+        height: 30px;
+        width: 100px;
+        margin-left: 90px;
+        line-height: 30px;
+      }
+      &--form {
+        margin: 0 auto;
+        height: 30px;
+        width: 300px;
+        border: solid 1px black;
+        border-radius: 0.5em;
+        margin-bottom: 20px;
+        padding-left: 5px;
+        line-height: 30px;
+      }
+    }
+    &--body {
+      &--label {
+        height: 30px;
+        width: 100px;
+        margin-left: 90px;
+        line-height: 30px;
+      }
+      &--form {
+        margin: 0 auto;
+        height: 80px;
+        width: 300px;
+        border: solid 1px black;
+        border-radius: 0.5em;
+        margin-bottom: 20px;
+      }
+    }
+    &--time {
+      display: flex;
+      justify-content: space-between;
+      &--start {
+        padding-left: 80px;
+      }
+      &--end {
+        padding-right: 80px;
+      }
+    }
+  }
+  &__btn {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    &--edit, &--back, &--destroy {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+}
