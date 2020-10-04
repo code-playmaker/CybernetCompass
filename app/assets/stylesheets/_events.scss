@@ -96,6 +96,19 @@
       }
     }
   }
+  &--edit {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    &--btn1, &--btn2 {
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
 .events-show {
   width: 100%;
