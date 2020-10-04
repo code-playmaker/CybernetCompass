@@ -75,7 +75,7 @@ has_many :users
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
-|upload_file_name|string|
+|upload_file_name|string|-|
 |upload_file|binary|-|
 |date|datetime|-|
 |user_id|references|null: false, foreign_key: true|
@@ -87,7 +87,7 @@ belongs_to :user
 |------|----|-------|
 |title|string|null: false|
 |content|string|null: false|
-|upload_file_name|string|
+|upload_file_name|string|-|
 |upload_file|binary|-|
 |date|datetime|-|
 |user_id|references|null: false, foreign_key: true|
@@ -119,9 +119,17 @@ belongs_to :user
 
 ## 今後の予定
 
-### お気に入り機能の実装
-メッセージ・データにお気に入り保存することで各々が必要だと考えた情報をすぐに閲覧し直せるようにする。
+### 一覧で表示する
+* メッセージ・回覧・お知らせの一覧（showアクションを表示できるようにする。）
 
-### gem 'fullcallender'の導入
-カレンダー機能をつける。
-※googleカレンダーは個人が特定される恐れがあるため、導入しない。
+### アップロードとダウンロード機能
+
+### お気に入り機能の実装
+* メッセージ・データにお気に入り保存することで各々が必要だと考えた情報をすぐに閲覧し直せるようにする。
+
+### カテゴリー機能
+* 部署のカテゴリー化をする。カテゴリー後、メッセージ・回覧・お知らせを部署と紐付ける。
+
+### gem 'fullcallender'
+* そのユーザーが立てたスケジュールのみを編集・削除できるようする。
+* スケジュールを個人のみではなく、係全体が見れるようにする。
