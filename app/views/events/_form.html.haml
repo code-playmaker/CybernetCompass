@@ -1,0 +1,28 @@
+.events-new__format
+  = form_for @event do |f|
+    - if @event.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
+        %ul
+          - @event.errors.full_messages.each do |message|
+            %li= message
+    .field__title
+      = f.label :件名：, class: "field__title--label"
+      %br
+      = f.text_field :title, autofocus: true, autocomplete: "title", required: "true", class: "field__title__field"
+    .field__body
+      = f.label :詳細：, class: "field__body--label"
+      %br
+      = f.text_area :body, autofocus: true, autocomplete: "title", required: "true", class: "field__body__area"
+    .field__time
+      .field__time__start
+        = f.label :開始時刻：, class: "field__time__start--label"
+        %br
+        = f.datetime_select :start_date, autofocus: true, autocomplete: "title", required: "true", class: "field__time__start--dateselect"
+      .field__time__end
+        = f.label :終了時刻：, class: "field__time__end--label"
+        %br
+        = f.datetime_select :end_date, autofocus: true, autocomplete: "title", required: "true", class: "field__time__end--dateselect"
+    .actions
+      = f.submit '決定', class: "actions--btn"
+    %br
