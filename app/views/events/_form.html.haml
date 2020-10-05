@@ -18,11 +18,11 @@
       .field__time__start
         = f.label :開始時刻：, class: "field__time__start--label"
         %br
-        = f.datetime_select :start_date, autofocus: true, autocomplete: "title", required: "true", class: "field__time__start--dateselect"
+        = f.datetime_select :start_date, {use_month_numbers: true}, autofocus: true, autocomplete: "title", required: "true", class: "field__time__start--dateselect"
       .field__time__end
         = f.label :終了時刻：, class: "field__time__end--label"
         %br
-        = f.datetime_select :end_date, autofocus: true, autocomplete: "title", required: "true", class: "field__time__end--dateselect"
+        = f.datetime_select :end_date, {use_month_numbers: true}, autofocus: true, autocomplete: "title", required: "true", class: "field__time__end--dateselect"
     .actions
       = f.submit '決定', class: "actions--btn"
     %br
