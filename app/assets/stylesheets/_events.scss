@@ -121,6 +121,14 @@
     background-color: #fff;
     width: 500px;
     margin: 0 auto;
+    &--name {
+      height: 50px;
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+    }
     &--title {
       padding-top: 10px;
       &--label {
@@ -176,6 +184,8 @@
     &--edit, &--back, &--destroy {
       display: inline-block;
       text-decoration: none;
+      color: #00bfff;
+      font-weight: bold;
     }
   }
 }
