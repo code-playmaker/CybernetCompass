@@ -1,6 +1,8 @@
 .events-show
   %p#notice= notice
   .events-show__format
+    %p.events-show__format--name
+      = "#{@event.user.name}さん の予定"
     %p.events-show__format--title
       .events-show__format--title--label
         %b 件名：
@@ -21,9 +23,13 @@
         = @event.end_date.strftime("%H:%M")
     %br
   %br
-  .events-show__btn
-    = link_to '編集', edit_event_path(@event), class: "events-show__btn--edit"
-    \|
-    = link_to '戻る', events_path, class: "events-show__btn--back"
-    \|
-    = link_to '削除', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: "events-show__btn--destroy"
+  -if user_signed_in? && current_user.id == @event.user_id
+    .events-show__btn
+      = link_to '編集', edit_event_path(@event), class: "events-show__btn--edit"
+      \|
+      = link_to '戻る', events_path, class: "events-show__btn--back"
+      \|
+      = link_to '削除', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: "events-show__btn--destroy"
+  -else
+    .events-show__btn
+      = link_to '戻る', events_path, class: "events-show__btn--back"
