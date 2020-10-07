@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    # message = {}
+    message = {}
     if message_params[:upload_file].present?
       message_params[:upload_file].read
       message_params[:upload_file_name] = message_params[:upload_file].original_filename
