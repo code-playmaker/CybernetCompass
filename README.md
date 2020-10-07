@@ -132,3 +132,5 @@ belongs_to :user
 
 ### gem 'fullcallender'
 * スケジュールを個人のみではなく、係全体が見れるようにする。
+
+### デプロイ
